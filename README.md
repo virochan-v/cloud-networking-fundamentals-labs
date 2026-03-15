@@ -19,25 +19,33 @@ cloud-networking-fundamentals-labs
 │   ├── routed-network-topology.png
 │   ├── routed-network-ping-validation.png
 │   ├── dns-web-topology.png
-│   └── dns-web-browser-validation.png
+│   ├── dns-web-browser-validation.png
+│   ├── dns-connectivity-validation.png
+│   ├── acl-network-topology.png
+│   ├── acl-router-configuration.png
+│   ├── acl-blocked-host-test.png
+│   └── acl-web-access-success.png
 │
 └── labs
     ├── routed-network-connectivity
     │   └── lab-overview.md
     │
-    └── dns-and-web-service-simulation
+    ├── dns-and-web-service-simulation
+    │   └── lab-overview.md
+    │
+    └── access-control-list-filtering
         └── lab-overview.md
 ```
 
 ---
 
-## Lab Experiments
+# Lab Experiments
 
-### 1. Routed Network Connectivity
+## 1. Routed Network Connectivity
 
 This experiment demonstrates how devices located in separate subnets communicate through a router acting as a gateway.
 
-Key concepts explored:
+### Key Concepts Explored
 
 - Subnet communication
 - Default gateway configuration
@@ -46,15 +54,17 @@ Key concepts explored:
 
 Documentation:
 
-`labs/routed-network-connectivity/lab-overview.md`
+```
+labs/routed-network-connectivity/lab-overview.md
+```
 
 ---
 
-### 2. DNS and Web Service Simulation
+## 2. DNS and Web Service Simulation
 
 This experiment demonstrates how users access a web service using a domain name instead of a numerical IP address.
 
-Key concepts explored:
+### Key Concepts Explored
 
 - DNS name resolution
 - Domain-to-IP mapping using DNS records
@@ -63,18 +73,44 @@ Key concepts explored:
 
 Documentation:
 
-`labs/dns-and-web-service-simulation/lab-overview.md`
+```
+labs/dns-and-web-service-simulation/lab-overview.md
+```
 
 ---
 
-## Tools Used
+## 3. Access Control List (ACL) Traffic Filtering
+
+This experiment demonstrates how routers enforce network security policies using Standard Access Control Lists.
+
+The router is configured to:
+
+- Allow access to the web server for authorized hosts
+- Block access for unauthorized hosts
+
+### Key Concepts Explored
+
+- Standard Access Control Lists
+- Source IP based traffic filtering
+- Router interface security policies
+- Controlled access to network services
+
+Documentation:
+
+```
+labs/access-control-list-filtering/lab-overview.md
+```
+
+---
+
+# Tools Used
 
 - Cisco Packet Tracer
 - Networking protocols: ICMP, DNS, HTTP
 
 ---
 
-## Learning Outcomes
+# Learning Outcomes
 
 Through these labs, the following networking concepts were reinforced:
 
@@ -82,12 +118,22 @@ Through these labs, the following networking concepts were reinforced:
 - Routing and gateway configuration
 - Domain name resolution using DNS
 - Web service access using HTTP
+- Network traffic filtering using Access Control Lists
 - Interaction between networking and application layers
 
 ---
 
-## Relevance to Cloud Computing
+# Relevance to Cloud Computing
 
-Networking fundamentals are critical when working with modern cloud platforms such as Microsoft Azure. Concepts such as routing, DNS resolution, and service access directly relate to cloud networking components like virtual networks, gateways, load balancers, and managed DNS services.
+Networking fundamentals are critical when working with modern cloud platforms such as Microsoft Azure.
 
-Understanding these foundational principles helps build a strong base for designing and operating cloud-based systems.
+Concepts demonstrated in these labs relate directly to cloud networking components such as:
+
+- Virtual Networks
+- Subnet segmentation
+- Network Security Groups
+- Application access control
+- Managed DNS services
+- Service connectivity across network boundaries
+
+Understanding these foundational principles helps build a strong base for designing, deploying, and operating cloud-based systems.
