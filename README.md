@@ -24,16 +24,23 @@ cloud-networking-fundamentals-labs
 │   ├── acl-network-topology.png
 │   ├── acl-router-configuration.png
 │   ├── acl-blocked-host-test.png
-│   └── acl-web-access-success.png
+│   ├── acl-web-access-success.png
+│   ├── dhcp-network-topology.png
+│   ├── dhcp-router-configuration.png
+│   ├── dhcp-ip-assignment.png
+│   └── dhcp-connectivity-test.png
 │
 └── labs
     ├── routed-network-connectivity
     │   └── lab-overview.md
-    │
+│
     ├── dns-and-web-service-simulation
     │   └── lab-overview.md
-    │
-    └── access-control-list-filtering
+│
+    ├── access-control-list-filtering
+    │   └── lab-overview.md
+│
+    └── dhcp-dynamic-ip-assignment
         └── lab-overview.md
 ```
 
@@ -103,10 +110,30 @@ labs/access-control-list-filtering/lab-overview.md
 
 ---
 
+## 4. DHCP Dynamic IP Assignment
+
+This experiment demonstrates how a router can act as a DHCP server to automatically assign IP addresses to client devices.
+
+### Key Concepts Explored
+
+- Dynamic Host Configuration Protocol (DHCP)
+- Automatic IP address allocation
+- Default gateway assignment
+- DNS server configuration
+- Network automation
+
+Documentation:
+
+```
+labs/dhcp-dynamic-ip-assignment/lab-overview.md
+```
+
+---
+
 # Tools Used
 
 - Cisco Packet Tracer
-- Networking protocols: ICMP, DNS, HTTP
+- Networking protocols: ICMP, DNS, HTTP, DHCP
 
 ---
 
@@ -119,6 +146,7 @@ Through these labs, the following networking concepts were reinforced:
 - Domain name resolution using DNS
 - Web service access using HTTP
 - Network traffic filtering using Access Control Lists
+- Dynamic IP allocation using DHCP
 - Interaction between networking and application layers
 
 ---
@@ -134,6 +162,7 @@ Concepts demonstrated in these labs relate directly to cloud networking componen
 - Network Security Groups
 - Application access control
 - Managed DNS services
+- Dynamic IP allocation (DHCP in cloud environments)
 - Service connectivity across network boundaries
 
 Understanding these foundational principles helps build a strong base for designing, deploying, and operating cloud-based systems.
