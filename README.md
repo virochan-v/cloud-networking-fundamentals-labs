@@ -28,7 +28,11 @@ cloud-networking-fundamentals-labs
 │   ├── dhcp-network-topology.png
 │   ├── dhcp-router-configuration.png
 │   ├── dhcp-ip-assignment.png
-│   └── dhcp-connectivity-test.png
+│   ├── dhcp-connectivity-test.png
+│   ├── nat-network-topology.png
+│   ├── nat-router-configuration.png
+│   ├── nat-connectivity-test.png
+│   └── nat-translation-table.png
 │
 └── labs
     ├── routed-network-connectivity
@@ -40,7 +44,10 @@ cloud-networking-fundamentals-labs
     ├── access-control-list-filtering
     │   └── lab-overview.md
 │
-    └── dhcp-dynamic-ip-assignment
+    ├── dhcp-dynamic-ip-assignment
+    │   └── lab-overview.md
+│
+    └── nat-private-to-public-translation
         └── lab-overview.md
 ```
 
@@ -130,10 +137,31 @@ labs/dhcp-dynamic-ip-assignment/lab-overview.md
 
 ---
 
+## 5. NAT (Network Address Translation)
+
+This experiment demonstrates how private network devices access external networks using NAT and PAT (Port Address Translation).
+
+### Key Concepts Explored
+
+- Network Address Translation (NAT)
+- Port Address Translation (PAT)
+- Private vs Public IP addressing
+- Source IP translation
+- Many-to-one IP mapping
+- Enabling internet access for private networks
+
+Documentation:
+
+```
+labs/nat-private-to-public-translation/lab-overview.md
+```
+
+---
+
 # Tools Used
 
 - Cisco Packet Tracer
-- Networking protocols: ICMP, DNS, HTTP, DHCP
+- Networking protocols: ICMP, DNS, HTTP, DHCP, NAT
 
 ---
 
@@ -147,6 +175,7 @@ Through these labs, the following networking concepts were reinforced:
 - Web service access using HTTP
 - Network traffic filtering using Access Control Lists
 - Dynamic IP allocation using DHCP
+- Private to public communication using NAT
 - Interaction between networking and application layers
 
 ---
@@ -157,12 +186,13 @@ Networking fundamentals are critical when working with modern cloud platforms su
 
 Concepts demonstrated in these labs relate directly to cloud networking components such as:
 
-- Virtual Networks
+- Virtual Networks (VNets)
 - Subnet segmentation
-- Network Security Groups
+- Network Security Groups (NSGs)
 - Application access control
 - Managed DNS services
 - Dynamic IP allocation (DHCP in cloud environments)
-- Service connectivity across network boundaries
+- NAT gateways and outbound connectivity
+- Service communication across network boundaries
 
 Understanding these foundational principles helps build a strong base for designing, deploying, and operating cloud-based systems.
