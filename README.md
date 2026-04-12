@@ -32,117 +32,105 @@ cloud-networking-fundamentals-labs
 │   ├── nat-network-topology.png
 │   ├── nat-router-configuration.png
 │   ├── nat-connectivity-test.png
-│   └── nat-translation-table.png
+│   ├── nat-translation-table.png
+│   ├── vlan-network-topology.png
+│   ├── vlan-switch-configuration.png
+│   ├── vlan-router-subinterfaces.png
+│   └── vlan-inter-vlan-ping-test.png
 │
 └── labs
     ├── routed-network-connectivity
     │   └── lab-overview.md
-│
+    │
     ├── dns-and-web-service-simulation
     │   └── lab-overview.md
-│
+    │
     ├── access-control-list-filtering
     │   └── lab-overview.md
-│
+    │
     ├── dhcp-dynamic-ip-assignment
     │   └── lab-overview.md
-│
-    └── nat-private-to-public-translation
+    │
+    ├── nat-private-to-public-translation
+    │   └── lab-overview.md
+    │
+    └── vlan-inter-vlan-routing
         └── lab-overview.md
 ```
 
 ---
 
-# Lab Experiments
+## Lab Experiments
 
-## 1. Routed Network Connectivity
-
+### 1. Routed Network Connectivity
 This experiment demonstrates how devices located in separate subnets communicate through a router acting as a gateway.
 
-### Key Concepts Explored
-
+**Key Concepts Explored**
 - Subnet communication
 - Default gateway configuration
 - Router-based packet forwarding
 - Connectivity verification using ICMP ping
 
-Documentation:
-
+**Documentation**
 ```
 labs/routed-network-connectivity/lab-overview.md
 ```
 
 ---
 
-## 2. DNS and Web Service Simulation
-
+### 2. DNS and Web Service Simulation
 This experiment demonstrates how users access a web service using a domain name instead of a numerical IP address.
 
-### Key Concepts Explored
-
+**Key Concepts Explored**
 - DNS name resolution
 - Domain-to-IP mapping using DNS records
 - HTTP web service hosting
 - End-to-end communication flow from DNS resolution to web service delivery
 
-Documentation:
-
+**Documentation**
 ```
 labs/dns-and-web-service-simulation/lab-overview.md
 ```
 
 ---
 
-## 3. Access Control List (ACL) Traffic Filtering
-
+### 3. Access Control List (ACL) Traffic Filtering
 This experiment demonstrates how routers enforce network security policies using Standard Access Control Lists.
 
-The router is configured to:
-
-- Allow access to the web server for authorized hosts
-- Block access for unauthorized hosts
-
-### Key Concepts Explored
-
+**Key Concepts Explored**
 - Standard Access Control Lists
 - Source IP based traffic filtering
 - Router interface security policies
 - Controlled access to network services
 
-Documentation:
-
+**Documentation**
 ```
 labs/access-control-list-filtering/lab-overview.md
 ```
 
 ---
 
-## 4. DHCP Dynamic IP Assignment
-
+### 4. DHCP Dynamic IP Assignment
 This experiment demonstrates how a router can act as a DHCP server to automatically assign IP addresses to client devices.
 
-### Key Concepts Explored
-
+**Key Concepts Explored**
 - Dynamic Host Configuration Protocol (DHCP)
 - Automatic IP address allocation
 - Default gateway assignment
 - DNS server configuration
 - Network automation
 
-Documentation:
-
+**Documentation**
 ```
 labs/dhcp-dynamic-ip-assignment/lab-overview.md
 ```
 
 ---
 
-## 5. NAT (Network Address Translation)
-
+### 5. NAT (Network Address Translation)
 This experiment demonstrates how private network devices access external networks using NAT and PAT (Port Address Translation).
 
-### Key Concepts Explored
-
+**Key Concepts Explored**
 - Network Address Translation (NAT)
 - Port Address Translation (PAT)
 - Private vs Public IP addressing
@@ -150,22 +138,40 @@ This experiment demonstrates how private network devices access external network
 - Many-to-one IP mapping
 - Enabling internet access for private networks
 
-Documentation:
-
+**Documentation**
 ```
 labs/nat-private-to-public-translation/lab-overview.md
 ```
 
 ---
 
-# Tools Used
+### 6. VLAN Inter-VLAN Routing (Router-on-a-Stick)
+This experiment demonstrates how communication between multiple VLANs is achieved using router subinterfaces and IEEE 802.1Q trunking.
 
-- Cisco Packet Tracer
-- Networking protocols: ICMP, DNS, HTTP, DHCP, NAT
+**Key Concepts Explored**
+- Virtual Local Area Networks (VLANs)
+- Network segmentation
+- Access and trunk ports
+- IEEE 802.1Q encapsulation
+- Router-on-a-Stick inter-VLAN routing
+- Default gateway configuration
+- Inter-VLAN connectivity verification using ICMP
+
+**Documentation**
+```
+labs/vlan-inter-vlan-routing/lab-overview.md
+```
 
 ---
 
-# Learning Outcomes
+## Tools Used
+
+- **Cisco Packet Tracer**
+- Networking protocols: **ICMP, DNS, HTTP, DHCP, NAT, VLAN (802.1Q)**
+
+---
+
+## Learning Outcomes
 
 Through these labs, the following networking concepts were reinforced:
 
@@ -176,23 +182,40 @@ Through these labs, the following networking concepts were reinforced:
 - Network traffic filtering using Access Control Lists
 - Dynamic IP allocation using DHCP
 - Private to public communication using NAT
+- Network segmentation using VLANs
+- Inter-VLAN routing using Router-on-a-Stick
 - Interaction between networking and application layers
 
 ---
 
-# Relevance to Cloud Computing
+## Relevance to Cloud Computing
 
 Networking fundamentals are critical when working with modern cloud platforms such as Microsoft Azure.
 
 Concepts demonstrated in these labs relate directly to cloud networking components such as:
 
-- Virtual Networks (VNets)
-- Subnet segmentation
-- Network Security Groups (NSGs)
-- Application access control
-- Managed DNS services
-- Dynamic IP allocation (DHCP in cloud environments)
-- NAT gateways and outbound connectivity
-- Service communication across network boundaries
+| Traditional Networking Concept | Cloud Equivalent |
+|-------------------------------|-----------------|
+| VLANs                         | Virtual Network Subnets |
+| Router                        | Virtual Network Gateway / Route Tables |
+| Inter-VLAN Routing            | Subnet-to-Subnet Communication |
+| Access Control Lists          | Network Security Groups (NSGs) |
+| DHCP                          | Automatic IP Assignment in VNets |
+| NAT/PAT                       | NAT Gateway / Outbound Connectivity |
+| DNS                           | Managed DNS Services |
+| Trunking                      | Virtual Network Peering |
 
 Understanding these foundational principles helps build a strong base for designing, deploying, and operating cloud-based systems.
+
+---
+
+## Author
+
+**Virochan V**  
+Cloud & Networking Enthusiast | CSBS Undergraduate
+
+---
+
+## ⭐ Contribution & Feedback
+
+If you find this repository helpful, feel free to ⭐ star it and share your feedback or suggestions!
